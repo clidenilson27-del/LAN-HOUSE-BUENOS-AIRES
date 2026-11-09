@@ -1,0 +1,292 @@
+/* RESET E ESTILOS GERAIS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f6f9;
+    color: #333;
+    min-height: 100vh;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* TELA DE LOGIN VIBRANTE (AZUL E LARANJA) */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0d1b2a 0%, #1b2a4a 40%, #ff6b00 100%);
+    padding: 1rem;
+}
+
+.login-card {
+    background: #ffffff;
+    padding: 2.5rem 2rem;
+    border-radius: 16px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    max-width: 440px;
+    text-align: center;
+    border-top: 6px solid #ff6b00;
+}
+
+.login-logo {
+    width: 100%;
+    max-height: 110px;
+    object-fit: contain;
+    margin-bottom: 1.2rem;
+}
+
+.subtitulo-login {
+    color: #4a5568;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.login-card input {
+    width: 100%;
+    padding: 0.9rem 1rem;
+    margin-bottom: 1.2rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.login-card input:focus {
+    border-color: #ff6b00;
+    outline: none;
+    box-shadow: 0 0 8px rgba(255, 107, 0, 0.3);
+}
+
+.login-card button {
+    width: 100%;
+    padding: 0.9rem;
+    background: linear-gradient(135deg, #ff6b00 0%, #e05600 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.05rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(255, 107, 0, 0.4);
+    transition: transform 0.2s, background 0.3s;
+}
+
+.login-card button:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, #ff7b1a 0%, #cc4e00 100%);
+}
+
+.erro {
+    color: #e53e3e;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* CABEÇALHO DO SISTEMA PRINCIPAL */
+header {
+    background-color: #0d1b2a;
+    border-bottom: 4px solid #ff6b00;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.header-logo {
+    max-height: 60px;
+    object-fit: contain;
+}
+
+.btn-sair {
+    background-color: #e53e3e;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.4rem;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-sair:hover {
+    background-color: #c53030;
+}
+
+/* LAYOUT PRINCIPAL (GRID) */
+.grid-container {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* CARDS E FORMULÁRIOS */
+.card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    margin-bottom: 1.5rem;
+}
+
+.card h2 {
+    font-size: 1.1rem;
+    color: #0d1b2a;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #ff6b00;
+    padding-bottom: 0.5rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+input, select {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    width: 100%;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #ff6b00;
+}
+
+button[type="submit"] {
+    background-color: #ff6b00;
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #e05600;
+}
+
+/* PAINEL FINANCEIRO / CAIXA */
+.painel-caixa {
+    background: #ffffff;
+}
+
+.caixa-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.caixa-item {
+    background: #f8fafc;
+    padding: 1.2rem;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.caixa-item span {
+    font-size: 0.85rem;
+    color: #64748b;
+    font-weight: 600;
+}
+
+.caixa-item strong {
+    font-size: 1.4rem;
+    color: #0d1b2a;
+}
+
+.caixa-item.destaque {
+    background: #fff7ed;
+    border-color: #ffedd5;
+}
+
+.caixa-item.destaque strong {
+    color: #ea580c;
+}
+
+/* TABELAS */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0.5rem;
+}
+
+th, td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+    font-size: 0.9rem;
+}
+
+th {
+    background-color: #0d1b2a;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+tr:hover {
+    background-color: #f8fafc;
+}
+
+.badge {
+    padding: 0.25rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.badge-pago {
+    background-color: #dcfce7;
+    color: #15803d;
+}
+
+.badge-pendente {
+    background-color: #fef3c7;
+    color: #b45309;
+}
+
+.btn-acao {
+    border: none;
+    padding: 0.35rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    margin-right: 0.3rem;
+}
+
+.btn-excluir {
+    background-color: #e53e3e;
+    color: white;
+}
+
+.btn-status {
+    background-color: #0284c7;
+    color: white;
+}
